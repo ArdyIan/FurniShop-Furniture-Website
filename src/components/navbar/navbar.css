@@ -1,0 +1,144 @@
+/* Untuk gambar background */
+.livingRoom {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    z-index: -1; 
+  }
+  
+  /* Navbar container */
+  .navbar {
+    height: 70px;
+    /* Transparan untuk melihat gambar */
+    display: flex;
+    justify-content: space-between; /* Konten di kiri dan kanan */
+    align-items: center;
+    padding: 0 20px; /* Tambahkan padding horizontal */
+    width: 100%; /* Pastikan penuh dalam viewport */
+    box-sizing: border-box; /* Sertakan padding dalam ukuran */
+    z-index: 1; /* Pastikan di atas gambar */
+  }
+  
+  /* Logo */
+  .logo {
+    font-weight: bold;
+    color: white;
+    font-size: 2rem; /* Ukuran font */
+  }
+  
+  /* Tombol navigasi */
+  .navButton {
+    margin-left: 10px; /* Jarak antar tombol */
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    color: #003580;
+    background-color: white;
+    border-radius: 5px;
+  }
+  
+  /* Link navigasi */
+  .nav-links {
+    display: flex;
+    gap: 1rem; /* Jarak antar item */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap; /* Hindari item membungkus */
+  }
+  
+  .nav-links li {
+    color: white;
+    cursor: pointer;
+  }
+  
+  /* Wrapper untuk tombol dan navigasi */
+  .navItems {
+    display: flex;
+    align-items: center; /* Selaraskan vertikal */
+    gap: 1rem; /* Jarak antara nav-links dan tombol */
+  }
+  
+  .headline-txt {
+    display: flex;
+    flex-direction: column; /* Atur elemen secara vertikal */
+    justify-content: center; /* Pusatkan secara vertikal */
+    align-items: center; /* Pusatkan secara horizontal */
+    height: 100vh; /* Tinggi penuh halaman */
+    text-align: center; /* Pusatkan teks */ /* Opsional: latar belakang semi-transparan */
+    padding: 20px; /* Tambahkan padding jika diperlukan */
+    box-sizing: border-box;
+    position: relative; /* Posisi relatif untuk referensi */
+    z-index: 1; /* Di atas gambar latar belakang */
+    margin-top: -80px;
+    margin-bottom: 40px;
+  }
+  
+  .main-text {
+    font-size: 3rem; /* Ukuran teks besar untuk h2 */
+    color: white; /* Warna teks */
+    margin-bottom: 10px; /* Jarak dengan elemen berikutnya */
+  }
+  
+  .sub-text {
+    font-size: 1.2rem; /* Ukuran teks lebih kecil */
+    font-weight: normal;
+    color: white; /* Warna teks */
+    margin-bottom: 40px; /* Jarak dengan tombol */
+  }
+  
+  .btn-shop {
+    background-color: rgba(255, 255, 255, 0.5); /* Latar belakang transparan putih */
+    color: black; /* Warna teks */
+    border: none;
+    padding: 15px 30px; /* Tambahkan padding untuk tombol */
+    border-radius: 5px; /* Sudut melengkung */
+    cursor: pointer;
+    font-size: 1.2rem; /* Ukuran font tombol */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi */
+  }
+  
+  .btn-shop:hover {
+    background-color: rgba(255, 255, 255, 1); /* Latar belakang putih solid */
+    color: #002d62; /* Warna teks berubah menjadi biru gelap */
+  }
+  
+  .info-container {
+    position: relative; /* Pastikan kontainer berada di atas gambar */
+    margin-top: -200px; /* Tarik ke atas mendekati tombol */
+    z-index: 2; /* Pastikan di atas gambar latar belakang */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
+    gap: 20px;
+    padding: 20px; /* Tambahkan padding untuk tampilan */
+    text-align: center;
+  }
+  
+  .info-box {
+    padding: 10px 0; /* Tambahkan jarak vertikal di dalam box */
+    display: flex;
+    flex-direction: column; /* Atur isi secara vertikal */
+    align-items: center; /* Selaraskan isi di tengah */
+    justify-content: center; /* Pusatkan isi secara vertikal */
+    background-color: #286F6C; /* Opsional: tambahkan latar belakang */
+    border-radius: 10px; /* Sudut melengkung untuk estetika */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+  }
+  
+  .info-box-h2 {
+    font-size: 2rem; /* Ukuran font besar */
+    color: white; /* Warna utama */
+    margin: 0; /* Hilangkan margin default */
+    margin-bottom: 5px;
+  }
+  
+  .info-box-text {
+    font-size: 1rem; /* Ukuran font teks */
+    color: white; /* Warna teks */
+    margin-top: 0px; /* Tambahkan jarak ke atas */
+  }
+  

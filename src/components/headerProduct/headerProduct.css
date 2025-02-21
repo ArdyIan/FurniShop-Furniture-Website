@@ -1,0 +1,44 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.home-link {
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: black;
+}
+
+.cart-icon {
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.cart-image {
+  width: 24px;
+}
+
+.cart-badge {
+  position: absolute;
+  top: 66%;
+  right: 50%;
+  background-color: red;
+  color: white;
+  font-size: 0.875rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
