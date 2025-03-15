@@ -1,144 +1,369 @@
-/* Untuk gambar background */
-.livingRoom {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover; 
-    z-index: -1; 
-  }
-  
-  /* Navbar container */
-  .navbar {
-    height: 70px;
-    /* Transparan untuk melihat gambar */
-    display: flex;
-    justify-content: space-between; /* Konten di kiri dan kanan */
-    align-items: center;
-    padding: 0 20px; /* Tambahkan padding horizontal */
-    width: 100%; /* Pastikan penuh dalam viewport */
-    box-sizing: border-box; /* Sertakan padding dalam ukuran */
-    z-index: 1; /* Pastikan di atas gambar */
-  }
-  
-  /* Logo */
-  .logo {
-    font-weight: bold;
-    color: white;
-    font-size: 2rem; /* Ukuran font */
-  }
-  
-  /* Tombol navigasi */
-  .navButton {
-    margin-left: 10px; /* Jarak antar tombol */
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    color: #003580;
-    background-color: white;
-    border-radius: 5px;
-  }
-  
-  /* Link navigasi */
-  .nav-links {
-    display: flex;
-    gap: 1rem; /* Jarak antar item */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    white-space: nowrap; /* Hindari item membungkus */
-  }
-  
-  .nav-links li {
-    color: white;
-    cursor: pointer;
-  }
-  
-  /* Wrapper untuk tombol dan navigasi */
-  .navItems {
-    display: flex;
-    align-items: center; /* Selaraskan vertikal */
-    gap: 1rem; /* Jarak antara nav-links dan tombol */
-  }
-  
-  .headline-txt {
-    display: flex;
-    flex-direction: column; /* Atur elemen secara vertikal */
-    justify-content: center; /* Pusatkan secara vertikal */
-    align-items: center; /* Pusatkan secara horizontal */
-    height: 100vh; /* Tinggi penuh halaman */
-    text-align: center; /* Pusatkan teks */ /* Opsional: latar belakang semi-transparan */
-    padding: 20px; /* Tambahkan padding jika diperlukan */
-    box-sizing: border-box;
-    position: relative; /* Posisi relatif untuk referensi */
-    z-index: 1; /* Di atas gambar latar belakang */
-    margin-top: -80px;
-    margin-bottom: 40px;
-  }
-  
-  .main-text {
-    font-size: 3rem; /* Ukuran teks besar untuk h2 */
-    color: white; /* Warna teks */
-    margin-bottom: 10px; /* Jarak dengan elemen berikutnya */
-  }
-  
-  .sub-text {
-    font-size: 1.2rem; /* Ukuran teks lebih kecil */
-    font-weight: normal;
-    color: white; /* Warna teks */
-    margin-bottom: 40px; /* Jarak dengan tombol */
-  }
-  
-  .btn-shop {
-    background-color: rgba(255, 255, 255, 0.5); /* Latar belakang transparan putih */
-    color: black; /* Warna teks */
-    border: none;
-    padding: 15px 30px; /* Tambahkan padding untuk tombol */
-    border-radius: 5px; /* Sudut melengkung */
-    cursor: pointer;
-    font-size: 1.2rem; /* Ukuran font tombol */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, color 0.3s ease; /* Efek transisi */
-  }
-  
-  .btn-shop:hover {
-    background-color: rgba(255, 255, 255, 1); /* Latar belakang putih solid */
-    color: #002d62; /* Warna teks berubah menjadi biru gelap */
-  }
-  
-  .info-container {
-    position: relative; /* Pastikan kontainer berada di atas gambar */
-    margin-top: -200px; /* Tarik ke atas mendekati tombol */
-    z-index: 2; /* Pastikan di atas gambar latar belakang */
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 kolom */
-    gap: 20px;
-    padding: 20px; /* Tambahkan padding untuk tampilan */
+/* NAVBAR */
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  background: transparent;
+}
+
+.container nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container nav .logo {
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.container .nav-link-hamburger li {
+  list-style: none;
+  margin: 0 0.5rem;
+}
+
+.container .nav-link-hamburger {
+  display: flex;
+}
+
+.container ul li a {
+  color: #ffffff;
+  font-size: 1.3rem;
+  padding: 0.7rem 1rem;
+  display: block;
+  border-radius: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.container ul li a:hover .container ul li a.active {
+  background: #f4f4f4;
+}
+
+.content-text {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -0%);
+}
+
+.content-text {
+  font-size: 6rem;
+  color: black;
+}
+
+.icon-bar {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+  color: white;
+  position: relative;
+  right: 6%;
+}
+
+@media (max-width: 768px) {
+  .content-text h2 {
+    font-size: 4rem;
     text-align: center;
   }
-  
-  .info-box {
-    padding: 10px 0; /* Tambahkan jarak vertikal di dalam box */
+
+  .icon-bar {
+    display: block;
+  }
+
+  .container .nav-link-hamburger {
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #286f6c;
+    position: absolute;
+    width: 200px;
+    height: 50vh;
+    top: -800px;
+    right: 0;
+    z-index: 10;
+    transition: all 0.7s;
+    cursor: pointer;
+    color: black;
+  }
+
+  .nav-link-hamburger.active {
+    top: 10%;
+    transition: all 0.7s ease-in;
+  }
+}
+
+
+.livingRoom {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Headline utama */
+.headline-txt {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+  text-align: center;
+  padding: 20px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  margin-top: -50px;
+}
+
+/* Teks utama */
+.main-text {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.sub-text {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: white;
+  /* margin-bottom: 40px; */
+}
+
+/* Tombol shop */
+.btn-shop {
+  margin-top: 3.5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  color: black;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-shop:hover {
+  background-color: rgba(255, 255, 255, 1);
+  color: #002d62;
+}
+
+/* Kontainer info - perbaikan posisi */
+.info-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+  margin: 0 auto;
+  width: 80%;
+  max-width: 1200px;
+  box-sizing: border-box;
+}
+
+.info-box {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #286f6c;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.info-box-h2 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+.info-box-text {
+  font-size: 1rem;
+  color: white;
+  margin-top: 0px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .headline-txt {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .main-text {
+    font-size: 2.5rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .headline-txt {
+    min-height: auto;
+    padding: 30px 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  .main-text {
+    font-size: 2rem;
+  }
+
+  .sub-text {
+    font-size: 1rem;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    position: static;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .bg-image {
     display: flex;
-    flex-direction: column; /* Atur isi secara vertikal */
-    align-items: center; /* Selaraskan isi di tengah */
-    justify-content: center; /* Pusatkan isi secara vertikal */
-    background-color: #286F6C; /* Opsional: tambahkan latar belakang */
-    border-radius: 10px; /* Sudut melengkung untuk estetika */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Tambahkan bayangan */
+    flex-direction: column;
+    min-height: 100vh;
   }
-  
+
+  .info-box {
+    padding: 10px;
+  }
+
   .info-box-h2 {
-    font-size: 2rem; /* Ukuran font besar */
-    color: white; /* Warna utama */
-    margin: 0; /* Hilangkan margin default */
-    margin-bottom: 5px;
+    font-size: 1.8rem;
   }
-  
+
   .info-box-text {
-    font-size: 1rem; /* Ukuran font teks */
-    color: white; /* Warna teks */
-    margin-top: 0px; /* Tambahkan jarak ke atas */
+    font-size: 0.9rem;
   }
-  
+}
+
+/* Perbaikan untuk layar kecil termasuk iPhone SE (375x667) */
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    gap: 5px;
+  }
+
+  .headline-txt {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  .main-text {
+    font-size: 1.8rem;
+  }
+
+  .sub-text {
+    font-size: 0.9rem;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    position: static;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .info-box {
+    padding: 8px 5px;
+    min-height: 70px;
+  }
+
+  .info-box-h2 {
+    font-size: 1.25rem;
+    margin-bottom: 2px;
+  }
+
+  .info-box-text {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+}
+
+/* Media query khusus untuk iPhone SE dan layar sangat kecil */
+@media (max-width: 375px) {
+  .container .nav-link-hamburger {
+    width: 100%;
+    right: 0;
+  }
+
+  .headline-txt {
+    padding: 15px 10px;
+    margin-top: 10px;
+  }
+
+  .main-text {
+    font-size: 1.6rem;
+  }
+
+  .sub-text {
+    font-size: 0.8rem;
+    margin-bottom: 20px;
+  }
+
+  .btn-shop {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
+
+  .info-container {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 20px;
+    position: static;
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .info-box {
+    padding: 5px;
+    min-height: 60px;
+  }
+
+  .info-box-h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0;
+  }
+
+  .info-box-text {
+    font-size: 0.7rem;
+  }
+}
