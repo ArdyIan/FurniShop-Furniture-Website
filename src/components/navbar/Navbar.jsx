@@ -1,34 +1,56 @@
 import "./navbar.css";
 import livingRoom from "../../assets/living-room.png";
 import { Link } from "react-router-dom";
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 const Navbar = () => {
   console.log("Navbar loaded");
 
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <div className="bg-image">
       <img src={livingRoom} alt="livingRoom" className="livingRoom" />
-      <div className="navbar">
-        <span className="logo">FurniShop</span>
-        <div className="navItems">
-          <ul className="nav-links">
-            <li>Home</li>
-            <li>About</li>
-            <li>Features</li>
-            <li>Contact</li>
-            <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
-          </ul>
+      <header>
+        <div className="container">
+          <nav>
+            <div className="logo">
+              <h2>FurniShop</h2>
+            </div>
+            <ul className={isOpen ? "nav-link-hamburger active" : "nav-link-hamburger"}>
+              <li>
+                <a href="/home" className="active">
+                  Home
+                </a>
+              </li>
+              <li>
+                <a href="/about">About</a>
+              </li>
+              <li>
+                <a href="/features">Features</a>
+              </li>
+              <li>
+                <a href="/contact">Contact</a>
+              </li>
+            </ul>
+            <div className="icon-bar" onClick={toggleMenu}>
+              <FaBars />
+            </div>
+          </nav>
         </div>
-      </div>
+      </header>
+
       <div className="headline-txt">
         <h2 className="main-text">Creative Home Simpify your Furniture</h2>
         <p className="sub-text">Do i have consent to record this meeting gain locaion, root-and-branch, review, nor game plan who’s the goto</p>
-        {/* <button className="btn-shop">Shop Now</button> */}
+
         <Link to={"/product"} className="btn-shop">
           Shop Now
         </Link>
-        {/* <img src={livingRoom} alt="livingRoom" className="livingRoom" /> */}
       </div>
       <div className="info-container">
         <div className="info-box">
