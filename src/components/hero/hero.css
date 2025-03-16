@@ -1,77 +1,152 @@
 .hero-container {
-    display: flex;
-    justify-content: space-between; /* Gambar kiri, teks kanan */
-    align-items: center;
-    padding: 40px 80px; /* Jarak dari tepi halaman */
-    gap: 40px;
-    height: calc(100vh - 10px); /* Sesuaikan tinggi dengan navbar */
-    box-sizing: border-box;
-    /* background-color: white; */
-  }
-  
-  .sofa {
-    max-width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 5%;
+  gap: 40px;
+  height: 150vh;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+}
+
+/* Untuk memastikan gambar sofa tetap responsif */
+.img-sofa {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+}
+
+.sofa {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.text-hero {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #333;
+  padding-left: 5%;
+}
+
+/* Headline */
+.headline-hero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  padding-bottom: 10px;
+}
+
+/* Deskripsi */
+.text1 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  padding-bottom: 20px;
+}
+
+/* Checklist container */
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Checklist item */
+.checklist-item {
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  padding-bottom: 15px;
+}
+
+/* Icon checklist */
+.check-icon {
+  font-size: 1.5rem;
+  color: black;
+}
+
+/* Title checklist */
+.check-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* Description checklist */
+.check-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: black;
+  padding-top: 5px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .hero-container {
+    flex-direction: column-reverse;
     height: auto;
-    object-fit: contain;
-    /* margin-left: 50px; */
-    /* align-items: center; */
+    /* text-align: center; */
+    padding: 40px 10%;
   }
-  
+
+  .img-sofa {
+    max-width: 80%;
+    margin-bottom: 20px;
+  }
+
   .text-hero {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    color: #333;
-    padding-left: 90px;
+    padding-left: 0;
   }
-  
-  /* We Create your home More aesthetic */
-  .headline {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: black;
-    padding-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .headline-hero {
+    font-size: 2rem;
   }
-  
-  /* Furniture power is a software as a service for multipurpose business management systems. */
+
   .text1 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
-    padding-bottom: 20px;
+    font-size: 1rem;
   }
-  
-  .checklist-item {
-    display: flex;
-    align-items: start;
-    gap: 30px;
-    padding-bottom: 20px;
-  }
-  
-  .checklist {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .check-icon {
-    font-size: 1.5rem;
-    color: #28a745;
-  }
-  
-  /* Valuation Services */
+
   .check-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: black;
-  }
-  
-  /* Sometimes features require a short description. This can be a detailed description. */
-  .check-description {
     font-size: 1.2rem;
-    line-height: 2;
-    color: black;
-    padding-top: 10px;
   }
-  
+
+  .check-description {
+    font-size: 0.9rem;
+  }
+
+  .check-icon {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container {
+    padding: 20px;
+  }
+
+  .headline-hero {
+    font-size: 1.8rem;
+  }
+
+  .text1 {
+    font-size: 0.9rem;
+  }
+
+  .checklist-item {
+    gap: 10px;
+  }
+
+  .check-title {
+    font-size: 1rem;
+  }
+
+  .check-description {
+    font-size: 0.8rem;
+  }
+}
