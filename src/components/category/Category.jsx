@@ -18,9 +18,14 @@ const Category = ({ onClick }) => {
   return (
     <div className="category-left">
       <div className="content-left">
-        <div className="headline1">New In</div>
-        <div className="headline1">Store Now</div>
-        <div className="cat-text">Get the latest items immediately with promo prices</div>
+        <div className="category-row">
+          <div className="headline1">
+            New In Store Now
+          </div>
+          {/* <div className="headline1">Store Now</div> */}
+          <div className="cat-text">Get the latest items immediately with promo prices</div>
+        </div>
+
         <span className="clickable-text" onClick={onClick}>
           {/* <span className="check-all-click">Check All -&gt;</span> */}
           <Link to={"/product"} className="check-all-click">
