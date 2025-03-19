@@ -6,7 +6,7 @@ const Advertisement = () => {
   return (
     <div className="hero-container-ads">
       <div className="text-hero-ads">
-        <span className="headline">
+        <span className="headline-ads">
           The Best Furniture
           <br />
           Manufacturer of your choice
