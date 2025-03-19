@@ -1,46 +1,117 @@
 .hero-container-ads {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 80px;
-    gap: 40px;
-    height: calc(100vh - 10px);
-    box-sizing: border-box;
-    /* background-color: white; */
-  }
-  
-  .sofa-ads {
-    max-width: 100%;
-    height: auto;
-    object-fit: contain;
-    /* margin-left: 50px; */
-    /* align-items: center; */
-  }
-  
-  .text-hero-ads {
-    flex: 1;
-    display: flex;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  gap: 40px;
+  height: calc(100vh - 10px);
+  box-sizing: border-box;
+  /* background-color: white; */
+}
+
+.sofa-ads {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 3%;
+  /* margin-left: 50px; */
+  /* align-items: center; */
+}
+
+.text-hero-ads {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  color: #333;
+  padding-left: 20px;
+  padding-right: 100px;
+  padding-bottom: 100px;
+}
+
+/* The Best Furniture */
+.headline-ads {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: black;
+  /* padding-bottom: 50px; */
+}
+
+/* Furnitre power is a software as services for multiperpose business management system, expecially for them who are running two or more business exploree the future Furnitre power is a software as services */
+.text1 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  padding-bottom: 20px;
+}
+
+/* RESPONSIVE WEBSITE */
+@media (max-width: 1024px) {
+  .hero-container-ads {
     flex-direction: column;
-    gap: 50px;
-    color: #333;
-    padding-left: 20px;
-    padding-right: 100px;
-    padding-bottom: 100px;
+    padding: 30px 0%;
+    height: auto;
+    gap: 20px;
   }
-  
-  /* The Best Furniture */
-  .headline {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: black;
-    /* padding-bottom: 50px; */
-  }
-  
-  /* Furnitre power is a software as services for multiperpose business management system, expecially for them who are running two or more business exploree the future Furnitre power is a software as services */
-  .text1 {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: black;
+
+  .text-hero-ads {
+    padding-right: 0;
     padding-bottom: 20px;
+    gap: 20px;
+    /* text-align: center; */
+    /* width: 90%; */
+    /* margin: 0 auto; */
   }
-  
+
+  .headline-ads {
+    font-size: 2rem;
+  }
+
+  .text1 {
+    font-size: 1rem;
+  }
+
+  .img-sofa-ads {
+    max-width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .hero-container-ads{
+  padding: 20px 4%;
+} */
+
+  /* .text-hero-ads {
+  width: 100%;
+  gap: 15px;
+} */
+
+  .headline-ads {
+    font-size: 1.8rem;
+  }
+
+  .text1 {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-container-ads {
+    padding: 15px 0%;
+    gap: 15px;
+  }
+
+  .text-hero-ads {
+    gap: 10px;
+  }
+
+  .headline-ads {
+    font-size: 1.5rem;
+  }
+
+  .text1 {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+}
