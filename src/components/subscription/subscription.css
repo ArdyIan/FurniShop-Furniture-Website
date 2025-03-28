@@ -1,85 +1,153 @@
 .subcription {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.img-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.subs-content-wrapper {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  width: 90%;
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.discount-heading {
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+}
+
+.join-mail {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  font-weight: 200;
+  color: white;
+  text-align: center;
+}
+
+.email-subscription {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+  flex-direction: column;
+}
+
+.email-subscription-input {
+  width: 100%;
+  max-width: 30rem;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+  background-color: white;
+  box-sizing: border-box;
+}
+
+.shop-now-button {
+  width: 100%;
+  max-width: 19rem;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: #212121;
+  color: white;
+  cursor: pointer;
+}
+
+.shop-now-button:hover {
+  background-color: #303030;
+}
+
+.error {
+  color: red;
+}
+
+.success {
+  color: lightgreen;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 1024px) {
+  .subcription {
+    height: auto;
+    min-height: 100vh;
+    padding: 50px 0;
   }
-  
-  .img-background {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-  }
-  
+
   .subs-content-wrapper {
-    position: absolute;
-    top: 50%;
-    right: 130px;
-    transform: translateY(-50%);
-    /* width: fit-content; */
-    text-align: right;
-    z-index: 1;
+    position: relative;
+    top: 0;
+    transform: none;
+    width: 90%;
+    margin: 0 auto;
   }
-  
+
   .discount-heading {
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
-    font-weight: 600;
-    color: white;
-    text-align: left;
+    font-size: 2.2rem;
   }
-  
+
   .join-mail {
-    margin-top: 1rem;
-    font-size: 1.1rem;
-    font-weight: 200;
-    color: white;
-    text-align: left;
+    font-size: 1rem;
   }
-  
-  .email-subscription {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 1.25rem;
-    flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .subs-content-wrapper {
+    width: 95%;
+    padding: 0 15px;
   }
-  
-  .email-subscription-input {
-    flex-grow: 1;
-    width: 30rem;
-    padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 0.25rem;
-    background-color: white;
+
+  .discount-heading {
+    font-size: 2rem;
   }
-  
+
+  .join-mail {
+    font-size: 0.9rem;
+  }
+
+  .email-subscription-input,
   .shop-now-button {
-    width: 19rem;
-    padding: 1rem 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    background-color: #212121;
-    color: white;
-    cursor: pointer;
+    width: 100%;
+    max-width: 100%;
   }
-  
-  .shop-now-button:hover {
-    background-color: #303030;
+}
+
+@media (max-width: 480px) {
+  .discount-heading {
+    font-size: 1.8rem;
   }
-  
-  /* reCaptcha */
-  
-  .error {
-    color: red;
+
+  .join-mail {
+    font-size: 0.85rem;
   }
-  
-  .success {
-    color: lightgreen;
+
+  .email-subscription {
+    gap: 0.5rem;
   }
-  
+
+  .email-subscription-input {
+    padding: 0.75rem;
+  }
+
+  .shop-now-button {
+    padding: 0.75rem 1rem;
+  }
+}
